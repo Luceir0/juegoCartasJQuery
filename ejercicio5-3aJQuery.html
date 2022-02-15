@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #tablero {
+            width: 50%;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .card {
+            background-color: limegreen;
+            border: 4px solid blueviolet;
+            text-align: center;
+            font-size: 40px;
+            color: blueviolet;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+    <title>Ejercicio Cartas con JQuery</title>
+</head>
+<body>
+    <p>Vas a crear un juego que consiste en encontrar parejas en 12 cartas con 6 parejas de imágenes. 
+        El juego consistirá en lo siguiente:
+    </p>
+    <ul>
+        <li>La aplicación deberá tener una tabla con 3 filas y cuatro columnas de un color. Además habrá un cuadro de texto con el valor 0 pero no modificable.</li>
+        <li>Cuando el usuario haga clic sobre una celda, se mostrará una imagen.</li>
+        <li>Cuando el usuario haga clic sobre otra celda, se mostrará otra imagen.</li>
+        <li> Si las dos imágenes son iguales, se cambiará el color de la celda y se añadirá 1 al cuadro de texto.</li>
+        <li>Si las dos imágenes son diferentes, se ocultarán mostrando nuevamente el color inicial.</li>
+        <li>Si las dos imágenes son diferentes, se ocultarán mostrando nuevamente el color inicial.</li>
+        <li>Además al entrar en la página al usuario se le pedirá un nombre la primera vez que entre, ese nombre será almacenado en una cookie además de un contador de visitas a la página.</li>
+        <li>Si vuelve a entrar en la página se le mostrará un mensaje en la misma página diciendo Hola “nombre” y el número de veces que visitó la página.</li>
+        <li>Puede ser de utilidad el atributo src del elemento < img >. Podremos acceder desde event.target o this.src</li>
+    </ul>
+     
+    <div id="tablero">
+        <div id="card1" class="card"><img id="0" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="sunny"></div>
+        <div id="card2" class="card"><img id="1" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="rainy"></div> 
+        <div id="card3" class="card"><img id="2" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="windy"></div> 
+        <div id="card4" class="card"><img id="3" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="cloudy"></div>
+        <div id="card5" class="card"><img id="4" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="snowy"></div> 
+        <div id="card6" class="card"><img id="5" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="stormy"></div> 
+        <div id="card7" class="card"><img id="6" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="sunny"></div> 
+        <div id="card8" class="card"><img id="7" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="rainy"></div> 
+        <div id="card9" class="card"><img id="8" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="windy"></div> 
+        <div id="card10" class="card"><img id="9" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="cloudy"></div>
+        <div id="card11" class="card"><img id="10" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="snowy"></div> 
+        <div id="card12" class="card"><img id="11" src="https://images-na.ssl-images-amazon.com/images/I/11npH-ZC3aL._SX331_BO1,204,203,200_.jpg" alt="stormy"></div> 
+    </div>
+    <h3 id="mensaje"></h3>
+    <h4 id="victorias"></h4>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+</html>
